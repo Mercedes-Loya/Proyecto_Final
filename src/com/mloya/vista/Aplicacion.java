@@ -13,7 +13,8 @@ import com.mloya.controlador.Coordinador;
  */
 public class Aplicacion {
     public static void main(String[] args) {
-        Coordinador.showMenu();
+        Coordinador coordinador= new Coordinador() ;
+        coordinador.showMenu();
     }
     
 }

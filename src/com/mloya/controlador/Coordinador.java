@@ -5,6 +5,10 @@
  */
 package com.mloya.controlador;
 
+import com.mloya.vista.Book;
+import com.mloya.vista.Magazine;
+import com.mloya.vista.Movie;
+import com.mloya.vista.Series;
 import static com.sun.org.apache.xalan.internal.lib.ExsltDatetime.date;
 import java.util.Date;
 import java.util.Scanner;
@@ -14,7 +18,13 @@ import java.util.Scanner;
  * @author MARIA LOYA
  */
 public class Coordinador {
-    public static void showMenu(){
+    Movie movie= new Movie(this);
+    Series series= new Series(this);
+    Book book= new Book(this);
+    Magazine magazine = new Magazine(this);
+    
+    public void showMenu(){
+        
       int exit=0;
         do { 
             System.out.println("Bienvenidos a Netflix viewer");
@@ -74,23 +84,26 @@ public class Coordinador {
         } while (exit !=0);
            
     }
-    private static void showMovies(){
-        int exit =0;
-        do { 
-            System.out.println("");
-            System.out.println("::MOVIES ::");
-            System.out.println("");
-            
-        } while (exit !=0);
+    private  void showMovies(){
+//        int exit =0;
+//        do { 
+//            System.out.println("");
+//            System.out.println("::MOVIES ::");
+//            System.out.println("");
+//            
+//        } while (exit !=0);
+            movie.setVisible(true);
     }
-     private static void showSeries(){
-        int exit =0;
-        do { 
-            System.out.println("");
-            System.out.println("::SERIES ::");
-            System.out.println("");
-            
-        } while (exit !=0);
+       
+     private  void showSeries(){
+//        int exit =0;
+//        do { 
+//            System.out.println("");
+//            System.out.println("::SERIES ::");
+//            System.out.println("");
+//            
+//        } while (exit !=0);
+         series.setVisible(true);
     }
       private static void showChapter(){
         int exit =0;
@@ -101,23 +114,25 @@ public class Coordinador {
             
         } while (exit !=0);
     }
-       private static void showBooks(){
-        int exit =0;
-        do { 
-            System.out.println("");
-            System.out.println("::BOOKS ::");
-            System.out.println("");
-            
-        } while (exit !=0);
+       private  void showBooks(){
+//        int exit =0;
+//        do { 
+//            System.out.println("");
+//            System.out.println("::BOOKS ::");
+//            System.out.println("");
+//            
+//        } while (exit !=0);
+         book.setVisible(true);
     }
-        private static void showMagazine(){
-        int exit =0;
-        do { 
-            System.out.println("");
-            System.out.println("::MAGAZINE ::");
-            System.out.println("");
-            
-        } while (exit !=0);
+        private  void showMagazine(){
+//        int exit =0;
+//        do { 
+//            System.out.println("");
+//            System.out.println("::MAGAZINE ::");
+//            System.out.println("");
+//            
+//        } while (exit !=0);
+          magazine.setVisible(true);
     }
          private static void makeReport(){
         
